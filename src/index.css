@@ -24,7 +24,7 @@ small {
   font-weight: bold;
 }
 .container.dark small {
-  color: beige;
+  color: whitesmoke;
 }
 
 #signToggle {
@@ -46,7 +46,7 @@ small {
   position: relative;
   height: auto;
   width: auto;
-  background: beige;
+  background: whitesmoke;
   padding: 20px;
   border-radius: 10px;
   box-shadow: -10px 8px 4px 0px rgba(0, 0, 0, 0.25);
@@ -62,7 +62,7 @@ small {
 }
 
 .theme-toggler.active::before {
-  background-color: beige;
+  background-color: whitesmoke;
 }
 
 .theme-toggler::before {
@@ -121,7 +121,7 @@ button#equal {
 /* light theme */
 
 .calculator {
-  background: beige;
+  background: whitesmoke;
 }
 
 .calculator #display {
