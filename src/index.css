@@ -24,6 +24,7 @@ a {
 h1 {
   color: rgb(36, 34, 34);
   font-weight: bold;
+  text-align: center;
 }
 small {
   font-size: 0.9rem;
