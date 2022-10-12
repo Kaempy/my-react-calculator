@@ -8,6 +8,7 @@ const Calculator = () => {
   const year = new Date().getFullYear();
   const {
     btn,
+    multiplyBtn,
     screen,
     // setScreen,
     clearScreenHandler,
@@ -59,16 +60,17 @@ const Calculator = () => {
                     id="/"
                     onClick={signClickHandler}
                   >
-                    &divide;
+                    /
                   </button>
                 </td>
                 <td>
                   <button
+                    style={multiplyBtn}
                     className="btn-operator"
                     id="*"
                     onClick={signClickHandler}
                   >
-                    &times;
+                    *
                   </button>
                 </td>
                 <td>
