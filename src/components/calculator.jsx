@@ -34,6 +34,7 @@ const Calculator = () => {
 
   return (
     <div className="container" ref={containerRef}>
+      <h1>My React Calculator</h1>
       <div className="calculator dark" ref={modeRef}>
         <div className="theme-toggler active" onClick={toggleTheme}></div>
         <div className="display-screen">
