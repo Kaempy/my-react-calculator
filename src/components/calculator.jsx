@@ -1,6 +1,5 @@
 // import { useEffect } from "react";
 import { useRef } from "react";
-import { Textfit } from "react-textfit";
 import useCalculate from "../hooks/useCalculator";
 
 const Calculator = () => {
@@ -17,7 +16,7 @@ const Calculator = () => {
     numClickHandler,
     signClickHandler,
     dotClickHandler,
-    evaluateHandler
+    evaluateHandler,
   } = useCalculate();
   const toggleTheme = (e) => {
     e.target.classList.toggle("active");
@@ -36,13 +35,9 @@ const Calculator = () => {
   return (
     <div className="container" ref={containerRef}>
       <div className="calculator dark" ref={modeRef}>
-        <div className="theme-toggler active" onClick={toggleTheme}>
-          {/* <i className="toggler-icon"></i> */}
-        </div>
+        <div className="theme-toggler active" onClick={toggleTheme}></div>
         <div className="display-screen">
-          <div id="display">
-            <Textfit>{screen}</Textfit>
-          </div>
+          <div id="display">{screen}</div>
         </div>
         <div className="buttons">
           <table>
