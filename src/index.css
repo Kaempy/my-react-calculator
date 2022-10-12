@@ -31,7 +31,7 @@ small {
   font-weight: bold;
 }
 .container.dark h1,
-small {
+.container.dark small {
   color: whitesmoke;
 }
 

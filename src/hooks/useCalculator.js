@@ -23,7 +23,7 @@ const useCalculate = () => {
   };
   const signClickHandler = (e) => {
     let sign = e.target.innerHTML;
-    let otherSign = ["+", "-", "÷", "×"];
+    let otherSign = ["+", "-", "/", "*"];
     if (otherSign.includes(screen.at(-1))) {
       setScreen((prev) => prev);
     } else {
@@ -59,9 +59,13 @@ const useCalculate = () => {
     display: "flex",
     justifyContent: "center",
   };
+  const multiplyBtn = {
+    fontSize: "2rem",
+  };
   return {
     screen,
     btn,
+    multiplyBtn,
     setScreen,
     clearScreenHandler,
     backspaceHandler,
