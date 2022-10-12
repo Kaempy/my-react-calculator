@@ -79,12 +79,8 @@ small {
 
 #display {
   margin: 0 10px;
-  height: 150px;
   width: auto;
   max-width: 270px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   font-size: 30px;
   margin-bottom: 20px;
   overflow-x: scroll;
@@ -97,6 +93,11 @@ small {
 .display-screen {
   border-radius: 1rem;
   border: 1px solid #007be5;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow-wrap: break-word;
 }
 
 button {

@@ -8,6 +8,9 @@ const useCalculate = () => {
 
   const backspaceHandler = () => {
     setScreen((prev) => prev.slice(0, -1));
+    if (screen.length === 1) {
+      setScreen("0");
+    }
     // setScreen((prev) => prev.slice(0, prev.length - 1));
   };
   const numClickHandler = (e) => {
@@ -20,7 +23,8 @@ const useCalculate = () => {
   };
   const signClickHandler = (e) => {
     let sign = e.target.innerHTML;
-    if (screen.slice(screen.length - 1) === sign) {
+    let otherSign = ["+", "-", "÷", "×"];
+    if (otherSign.includes(screen.at(-1))) {
       setScreen((prev) => prev);
     } else {
       setScreen((prev) => prev.concat(sign));
@@ -44,15 +48,16 @@ const useCalculate = () => {
     }
   };
   const evaluateHandler = () => {
-    let result = eval(screen);
-    setScreen((prev) => (prev = result));
+    let result = Function("return " + screen)();
+    // let result = eval(screen);
+    setScreen((prev) => prev.replace(prev, result));
   };
   const btn = {
     fontWeight: "bold",
     fontSize: "2rem",
     color: "white",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   };
   return {
     screen,
@@ -64,7 +69,7 @@ const useCalculate = () => {
     numClickHandler,
     signClickHandler,
     dotClickHandler,
-    evaluateHandler
+    evaluateHandler,
   };
 };
 
