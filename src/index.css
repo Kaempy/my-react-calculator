@@ -94,21 +94,25 @@ small {
   max-width: 270px;
   font-size: 30px;
   margin-bottom: 20px;
-  overflow-x: scroll;
+  overflow: auto;
 }
 
 #display::-webkit-scrollbar {
   display: block;
   height: 3px;
 }
+
 .display-screen {
   border-radius: 1rem;
   border: 1px solid #007be5;
   height: 150px;
+  max-height: 150px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   overflow-wrap: break-word;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 button {
